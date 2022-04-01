@@ -24,7 +24,7 @@ class Discriminator(nn.Module):
     """Discriminator: (image x, domain y) -> (logit out)."""
     def __init__(self, image_size=256, num_domains=2, max_conv_dim=1024):
         super(Discriminator, self).__init__()
-        dim_in = 64 if image_size < 256 else 32
+        dim_in = 16 if image_size < 256 else 32
         blocks = []
         blocks += [nn.Conv2d(3, dim_in, 3, 1, 1)]
 
