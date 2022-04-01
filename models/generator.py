@@ -22,7 +22,7 @@ class Generator(nn.Module):
         super(Generator, self).__init__()
         print("Init Generator")
 
-        self.nf = 64 if img_size < 256 else 32
+        self.nf = 16 if img_size < 256 else 32
         self.nf_mlp = 256
 
         self.decoder_norm = 'adain'
