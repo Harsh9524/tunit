@@ -268,6 +268,7 @@ def main_worker(gpu, ngpus_per_node, args):
 
     # All the test is done in the training - do not need to call
     if args.validation:
+        plot_tSNE(data_loader, networks, 999, args, additional=None)
         validationFunc(val_loader, networks, 999, args, {'logger': logger, 'queue': queue})
         return
 
